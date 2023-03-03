@@ -9,12 +9,27 @@ app.get("/", (req, res) => {
 	res.json(data)
 })
 
-app.get("/class/:id", (req, res) => {
-	const studentId = Number(req.params.id)
+// app.get(
+// 	"/next",
+// 	(req, res, next) => {
+// 		console.log("the response will be sent by the next function")
+// 		next()
+// 	},
+// 	(req, res) => {
+// 		res.send("i just setup a route with two functions")
+// 	}
+// )
 
-	const student = data.filter((x) => x.id === studentId)
-	res.send(student)
-})
+// app.get("/class/:id", (req, res) => {
+// 	const studentId = Number(req.params.id)
+
+// 	const student = data.filter((x) => x.id === studentId)
+// 	res.send(student)
+// })
+
+// app.get("/redirect", (req, res) => {
+// 	res.redirect("https://linkedin.com")
+// })
 
 app.listen(PORT, () => {
 	console.log(`App is running on port ${PORT}`)
