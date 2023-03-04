@@ -5,8 +5,16 @@ const app = express()
 
 const PORT = 3008
 
+// app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
 app.get("/", (req, res) => {
 	res.json(data)
+})
+
+app.post("/item", (req, res) => {
+	console.log(req.body)
+	res.send(req.body)
 })
 
 // app.get(
